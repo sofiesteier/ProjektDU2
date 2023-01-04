@@ -96,6 +96,50 @@ function toggle_cities (event) {
 // ATTENTION: You need to write the specification of all three functions:
 //            create_countries_cities_filters, create_country and create_city
 function create_countries_cities_filters () {
+  
+  /*
+  create_countries_cities_filters:
+  ARGUMENT:
+    Den tar inte emot något argument.
+
+  SIDEEFFECTS:
+    Skapar de olika filterknapparna med länder och deras städer.
+
+  RETURN:
+    Inget.
+
+  create_country:
+    ARGUMENT:
+    Tar emot ett objekt (country) från arrayen COUNTRIES som innehåller följande nycklarna:
+      id: Landets värde i form av ett id-nummer. 
+      name: en sträng med Landets namn. 
+    Ingen kontroll av argumentet behöver göras.
+
+  SIDE EFFECTS:
+    Skapar ett nytt dom_element för varje land och appendar det och ger det en text-content och en klass för den befintliga css-koden. 
+    Sedan filtreras varje city som har ett "country" ID som matchar med landet. 
+    Sedan anropas funktionen create_city för varje objekt i arrayen där varje city har blivit filtrerad. 
+
+  RETURN:
+    Inget. 
+
+  create_city:
+  ARGUMENT:
+    Tar emot ett objekt (city) från arrayen CITIES som innehåller följande nycklar:
+      id: Stadens värde i form av ett id-nummer.
+      name: en sträng med namnet på staden.
+      countryID: Id-nummer som visar i vilket land staden befinner sig i. 
+    Ingen kontroll av argumentet behöver göras. 
+
+  SIDE EFFECTS:
+    Skapar ett nytt dom_element för varje stad. 
+    Lägger till det i det nyskapande landet och ger det en klass så det kommer att väljas som standard. 
+    Den får även en text-content med namnet på staden, den lagrar stads id:et i dom_elementets dataset.
+    
+  RETURN
+    Inget.
+  */
+
   function create_country (country) {
     const dom = document.createElement("div");
     dom.classList.add("country");
