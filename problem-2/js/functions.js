@@ -214,8 +214,13 @@ function create_language_filter () {
   array_each(LANGUAGES, create_element);
 }
 
+//Specifikation för den sammanställda funktionen.
+  //ARGUMENT:
+  //Funktionen tar emot 
 
-// 
+  //SIDE-EFFECTS:
+
+  //RETURN:
 function create_levels_subjects_languages_filters (type, array) {
   function create (objekt) {
     const dom = create_filter_element ({
@@ -223,11 +228,12 @@ function create_levels_subjects_languages_filters (type, array) {
       class: "selected",
       textContent: objekt.name,
     }); 
-    
+    dom.dataset.id = objekt.id;
   }
 
   array_each(array, create)
 }
+console.log(array_each(LANGUAGES, create_levels_subjects_languages_filters));
 
 // G / VG (see details in specification)
 // CODE according to specifications
