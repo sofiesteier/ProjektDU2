@@ -215,6 +215,20 @@ function create_language_filter () {
 }
 
 
+// 
+function create_levels_subjects_languages_filters (type, array) {
+  function create (objekt) {
+    const dom = create_filter_element ({
+      parent: document.querySelector(`#${type}_filter > ul`),
+      class: "selected",
+      textContent: objekt.name,
+    }); 
+    
+  }
+
+  array_each(array, create)
+}
+
 // G / VG (see details in specification)
 // CODE according to specifications
 function create_programme (programme) {
