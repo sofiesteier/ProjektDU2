@@ -282,7 +282,6 @@ function update_programmes () {
   */
   const programme_container = document.querySelector("#programmes > ul");
   const programme_p = document.querySelector("p");
-  console.log(programme_p);
   programme_container.innerHTML = "";
 
   const right_programmes = read_filters();
@@ -304,6 +303,20 @@ function update_programmes () {
 
 // Optional VG: Which parts of the function's code could be abstracted?
 //              Implement it
+
+// ARGUMENTS:
+  // Tar inte emot några argument.
+
+// SIDE-EFFECTS:
+  // Funktionen kontrollerar vilka filter_element som är selected.
+  // Den kontrollerar/filtrerar städerna som finns, vilka univeristet som finns i städerna och vilka program som finns i universiteten.
+  // Sedan kontrollerar/filtreras nivån, språket och ämnet i det valde programmet som finns i universiteten.
+  // Sedan kontrollerar funktionen om sökfältet inte är tomt.
+  // Är sökfältet inte tomt, filtreras programmen och ser om ordet som är skrivet i sökfältet matchar. Matchar ordet kommer informationen att visas.
+  // Matchar inte ordet händer inget. 
+  
+// RETURN:
+  // Funktionen returnerar en array med det valda programmet som matchar de filter_element som är selected.
 function read_filters () {
   
   const city_selected_dom = document.querySelectorAll("#country_filter li.selected");
