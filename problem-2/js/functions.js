@@ -19,6 +19,7 @@ function click_filter_element (event) {
 
   */
   event.target.classList.toggle("selected");
+  update_programmes();
 }
 
 
@@ -279,9 +280,20 @@ function update_programmes () {
       NO RETURN VALUE
 
   */
+  const programme_container = document.querySelector("#programmes > ul");
+  const programme_p = document.querySelector("p");
+  console.log(programme_p);
+  programme_container.innerHTML = "";
 
+  const right_programmes = read_filters();
+  array_each(right_programmes, create_programme);
+
+  if (right_programmes.length > 0) {
+    programme_p.textContent = "";
+  } else {
+    programme_p.textContent = "Inga program uppfyller nuvarande filter"
+  };
   
-
 }
 
 
