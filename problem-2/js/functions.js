@@ -272,8 +272,28 @@ function create_programme (programme) {
     NO RETURN VALUE
 
   */  
+  const p_uniID = programme.universityID;
+  const p_cityID = UNIVERSITIES[p_uniID].cityID;
+  const p_countryID = CITIES[p_cityID].countryID;
+  const p_levelID = programme.levelID - 1;
+  const p_subjectID = programme.subjectID; 
+  const p_languageID = programme.languageID;
 
+  let new_programme_dom = document.createElement("li");
+  new_programme_dom.classList.add("programme");
+  new_programme_dom.setAttribute("id", `programme${programme.id}`);
+
+  new_programme_dom.innerHTML = `
+  <div class="top">
+    <h2>${programme.name}</h2>
+    <p>${UNIVERSITIES[p_uniID].name}</p>
+    <p>${CITIES[p_cityID].name}, ${COUNTRIES[p_countryID].name}</p>
+    <p>${LEVELS[p_levelID].name}, ${SUBJECTS[p_subjectID].name}, ${LANGUAGES[p_languageID].name}</p>
+  </div>`
+
+  document.querySelector("#programmes > ul").appendChild(new_programme_dom);
 }
+array_each(PROGRAMMES, create_programme);
 
 
 // G
@@ -293,6 +313,8 @@ function update_programmes () {
       NO RETURN VALUE
 
   */
+
+  
 
 }
 
