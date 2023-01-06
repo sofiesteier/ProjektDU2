@@ -193,7 +193,7 @@ function create_countries_cities_filters () {
 //    Abstract them to one function, and write the specification of that function
 
 
-function create_levels_subjects_languages_filters (type, array) {
+function create_levels_subjects_languages_filters (array, type) {
   //Specifikation för den sammanställda funktionen.
     //ARGUMENT:
     //Funktionen tar emot 
@@ -201,8 +201,6 @@ function create_levels_subjects_languages_filters (type, array) {
     //SIDE-EFFECTS:
 
     //RETURN:
-
-
   function create (objekt) {
     const dom = create_filter_element ({
       parent: document.querySelector(`#${type}_filter > ul`),
