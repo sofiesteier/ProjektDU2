@@ -201,8 +201,9 @@ function create_levels_subjects_languages_filters (array, type) {
     // En array som innehåller objekten av relevant information till filter typerna (levels, subjects, launguages).
 
     //SIDE-EFFECTS:
-    // Funktionen skapar li element för varje objekt i arrayen genom att använda create_filter_element funktionen inuti funktionen create.
-    // Li bifogas till type som ocksp blir id:et i parent. 
+    // Funktionen skapar ett li element för varje objekt i arrayen genom att använda create_filter_element funktionen inuti funktionen create.
+    // Type parametern används för dynamiskt sätta in en sträng som motsvarar rätt filter.
+    // Sedan får den klassen "selected" och en textcontent med objektets namn samt ett dataset id av objektets id. 
 
     //RETURN:
   function create (objekt) {
