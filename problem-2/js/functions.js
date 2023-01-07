@@ -19,6 +19,10 @@ function click_filter_element (event) {
 
   */
   event.target.classList.toggle("selected");
+<<<<<<< HEAD
+=======
+
+>>>>>>> function-click-filter-element
   update_programmes();
 }
 
@@ -218,6 +222,26 @@ function create_levels_subjects_languages_filters (array, type) {
   array_each(array, create)
 }
 
+//Specifikation för den sammanställda funktionen.
+  //ARGUMENT:
+  //Funktionen tar emot 
+
+  //SIDE-EFFECTS:
+
+  //RETURN:
+function create_levels_subjects_languages_filters (type, array) {
+  function create (objekt) {
+    const dom = create_filter_element ({
+      parent: document.querySelector(`#${type}_filter > ul`),
+      class: "selected",
+      textContent: objekt.name,
+    }); 
+    dom.dataset.id = objekt.id;
+  }
+
+  array_each(array, create)
+}
+console.log(array_each(LANGUAGES, create_levels_subjects_languages_filters));
 
 // G / VG (see details in specification)
 // CODE according to specifications
