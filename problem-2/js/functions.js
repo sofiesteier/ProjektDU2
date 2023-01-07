@@ -19,10 +19,6 @@ function click_filter_element (event) {
 
   */
   event.target.classList.toggle("selected");
-<<<<<<< HEAD
-=======
-
->>>>>>> function-click-filter-element
   update_programmes();
 }
 
