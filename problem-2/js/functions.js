@@ -196,10 +196,13 @@ function create_countries_cities_filters () {
 
 function create_levels_subjects_languages_filters (array, type) {
   //Specifikation för den sammanställda funktionen.
-    //ARGUMENT:
-    //Funktionen tar emot 
+    //ARGUMENTS:
+    //Funktionen tar emot två argumnet. 
+    // En array som innehåller objekten av relevant information till filter typerna (levels, subjects, launguages).
 
     //SIDE-EFFECTS:
+    // Funktionen skapar li element för varje objekt i arrayen genom att använda create_filter_element funktionen inuti funktionen create.
+    // Li bifogas till type som ocksp blir id:et i parent. 
 
     //RETURN:
   function create (objekt) {
