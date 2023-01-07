@@ -15,9 +15,9 @@
 
 
 // Create Filter Elements
-create_levels_subjects_languages_filters(LEVELS, "level");
-create_levels_subjects_languages_filters(SUBJECTS, "subject");
-create_levels_subjects_languages_filters(LANGUAGES, "language");
+create_levels_subjects_languages_filters("level", LEVELS);
+create_levels_subjects_languages_filters("subject", SUBJECTS);
+create_levels_subjects_languages_filters("language", LANGUAGES);
 create_countries_cities_filters();
 
 // Add Interaction of search field button

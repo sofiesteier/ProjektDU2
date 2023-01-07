@@ -237,7 +237,7 @@ function create_levels_subjects_languages_filters (type, array) {
 
   array_each(array, create)
 }
-console.log(array_each(LANGUAGES, create_levels_subjects_languages_filters));
+
 
 // G / VG (see details in specification)
 // CODE according to specifications
